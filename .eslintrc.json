@@ -1,0 +1,51 @@
+{
+    "env": {
+        "es2020": true,
+        "node": true,
+        "jest/globals": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "jest",
+        "json-format"
+    ],
+    "ignorePatterns": [
+        "build",
+        "node_modules",
+        "src/index.ts"
+    ],
+    "rules": {
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "ts": "never"
+            }
+        ],
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "error"
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".ts"
+                ],
+                "moduleDirectory": [
+                    "node_modules",
+                    "src/"
+                ]
+            }
+        }
+    }
+}
