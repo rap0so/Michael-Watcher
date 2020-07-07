@@ -20,7 +20,7 @@ The main goal is to have an observer who sits (like in a cinema chair), watch ur
 
 Michael requires the following to run:
 
-  * [Node.js][node] 0.10+
+  * [Node.js][node] +12.0.0
   * [npm][npm] (normally comes with Node.js)
 
 ---
