@@ -1,0 +1,12 @@
+[
+    {
+        "path": "https://www.decathlon.com.br/",
+        "name": "home",
+        "highPriority": true
+    },
+    {
+        "path": "https://www.decathlon.com.br/calcados",
+        "name": "department",
+        "highPriority": false
+    }
+]
