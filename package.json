@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc --build -f",
     "lint": "eslint . --ext .ts",
-    "dev": "yarn build; node build",
+    "start": "yarn build; node build",
     "test": "jest"
   },
   "dependencies": {
