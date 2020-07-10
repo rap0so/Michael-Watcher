@@ -1,6 +1,6 @@
 import { TUrls } from 'types';
 import printUrls from './printUrls';
-import { TFakeFns } from './types';
+import { TFakeFns } from './types-test';
 
 describe('printUrls', () => {
   const fakeFns: TFakeFns = {};
