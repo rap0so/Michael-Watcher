@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc --build -f",
+    "build:prod": "tsc -p tsconfig.prd.json",
     "dev": "yarn build; node build",
     "lint": "eslint . --ext .ts",
     "start": "yarn build:prod; node build",
