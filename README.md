@@ -31,19 +31,25 @@ Michael requires the following to run:
 ## Install
 
 ```sh
-yarn install
+yarn
+# or
+npm i
 ```
 
 ## Usage
 
 ```sh
-yarn run start
+yarn start
+# or
+npm start
 ```
 
 ## Run tests
 
 ```sh
-yarn run test
+yarn test
+# or
+npm test
 ```
 
 ## TODO
