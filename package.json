@@ -11,6 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@types/jest": "^26.0.4",
     "axios": "^0.19.2",
     "dayjs": "^1.8.29",
     "looks-same": "^7.2.3",
@@ -26,7 +27,6 @@
     "@babel/preset-typescript": "^7.10.4",
     "@commitlint/cli": "^9.0.1",
     "@commitlint/config-conventional": "^9.0.1",
-    "@types/jest": "^26.0.4",
     "@types/mkdirp": "^1.0.1",
     "@types/puppeteer": "^3.0.1",
     "@types/rimraf": "^3.0.0",
