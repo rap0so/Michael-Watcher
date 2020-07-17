@@ -14,6 +14,7 @@ const main = async () => {
   const weekDay = dayJs().day();
 
   // Today should be friday
+  console.log('Today should be friday')
   if (weekDay === 5) {
     const cpyOfUrls:TUrls = Array.from(urls);
     const saveFirstPrint = (url: TUrl) => printPage(url, 1);
@@ -23,6 +24,7 @@ const main = async () => {
   }
 
   // Today should be weekend
+  console.log('Today should be weekend')
   if (weekDay === 6 || weekDay === 7) {
     const cpyOfUrls:TUrls = Array.from(urls);
     const saveSecondPrint = (url: TUrl) => printPage(url, 2);
