@@ -2,22 +2,21 @@ import dayJs from 'dayjs';
 import http from 'http';
 import { TUrls, TUrl } from 'types';
 
-import comparePrints from './comparePrints';
-import { printDir } from './consts';
-import deletePrints from './deletePrints';
-import printPage from './printPage';
-import printUrls from './printUrls';
+import comparePrints from '../comparePrints';
+import { printDir } from '../consts';
+import deletePrints from '../deletePrints';
+import printPage from '../printPage';
+import printUrls from '../printUrls';
 
-import urls from './urls.json';
+import urls from '../urls.json';
 
 // TODO: integration test here
 // TODO: type res on a separated file
 const main = async ({ res }: { res: http.ServerResponse}) => {
   const weekDay = dayJs().day();
 
-  // Today should be friday
-  console.log('Today should be friday');
   if (weekDay === 5) {
+    console.log('Today should be friday');
     const cpyOfUrls:TUrls = Array.from(urls);
     const saveFirstPrint = (url: TUrl) => printPage(url, 1);
 
@@ -30,9 +29,8 @@ const main = async ({ res }: { res: http.ServerResponse}) => {
     }));
   }
 
-  // Today should be weekend
-  console.log('Today should be weekend');
   if (weekDay === 6 || weekDay === 7) {
+    console.log('Today should be weekend');
     const cpyOfUrls:TUrls = Array.from(urls);
     const saveSecondPrint = (url: TUrl) => printPage(url, 2);
     printUrls(cpyOfUrls, saveSecondPrint);
