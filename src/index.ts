@@ -1,4 +1,4 @@
-import { messageStartedServer } from 'consts';
+import { messageStartedServer } from './consts';
 import http from 'http';
 
 import main from './main';
