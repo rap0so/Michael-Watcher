@@ -59,7 +59,11 @@ const main = async ({ res }: { res: http.ServerResponse}) => {
     }
   }
 
-  return null;
+  return res.end(JSON.stringify({
+    success: true,
+    message: 'Invalid Date',
+    data: new Date(),
+  }));
 };
 
 export default main;
