@@ -29,7 +29,7 @@ const main = async ({ res }: { res: http.ServerResponse}) => {
     }));
   }
 
-  if (weekDay === 6 || weekDay === 7) {
+  if (true) {
     console.log('Today should be weekend');
     const cpyOfUrls:TUrls = Array.from(urls);
     const saveSecondPrint = (url: TUrl) => printPage(url, 2);
@@ -59,7 +59,11 @@ const main = async ({ res }: { res: http.ServerResponse}) => {
     }
   }
 
-  return null;
+  return res.end(JSON.stringify({
+    success: true,
+    message: 'Invalid date',
+    data: new Date(),
+  }));
 };
 
 export default main;
