@@ -13,6 +13,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "@slack/events-api": "^2.3.4",
+    "@slack/web-api": "^5.11.0",
     "@types/mkdirp": "^1.0.1",
     "@types/puppeteer": "^3.0.1",
     "@types/rimraf": "^3.0.0",
