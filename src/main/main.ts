@@ -7,6 +7,7 @@ import { printDir } from '../consts';
 import deletePrints from '../deletePrints';
 import printPage from '../printPage';
 import printUrls from '../printUrls';
+import sendMsgToSlack from '../sendMsgToSlack';
 
 import urls from '../urls.json';
 
@@ -23,7 +24,8 @@ const main = async ({ res }: { res: http.ServerResponse}) => {
     await deletePrints();
     printUrls(cpyOfUrls, saveFirstPrint);
 
-    res.end(JSON.stringify({
+    sendMsgToSlack('log', 'Printed URLs');
+    return res.end(JSON.stringify({
       success: true,
       message: 'Printed URLs',
     }));
@@ -49,20 +51,27 @@ const main = async ({ res }: { res: http.ServerResponse}) => {
     try {
       const resultOfComparedPrints = await Promise.all(comparedPrints);
 
-      res.end(JSON.stringify({
+      if (resultOfComparedPrints.length) {
+        sendMsgToSlack('warning', JSON.stringify(resultOfComparedPrints));
+      }
+
+      return res.end(JSON.stringify({
         success: true,
         message: 'Compared URLs',
         data: resultOfComparedPrints,
       }));
     } catch (error) {
-      // TODO: save to log + warn us
+      sendMsgToSlack('log', JSON.stringify(error));
     }
   }
 
+  const today = new Date();
+
+  sendMsgToSlack('log', `Today is ${today}`);
   return res.end(JSON.stringify({
     success: true,
     message: 'Invalid Date',
-    data: new Date(),
+    data: today,
   }));
 };
 

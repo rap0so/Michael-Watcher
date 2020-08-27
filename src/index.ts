@@ -1,6 +1,6 @@
-import { messageStartedServer } from './consts';
 import http from 'http';
 
+import { messageStartedServer } from './consts';
 import main from './main';
 
 const port = process.env.PORT || 9000
