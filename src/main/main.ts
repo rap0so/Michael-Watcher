@@ -25,7 +25,7 @@ const main = async ({ res }: { res: http.ServerResponse}) => {
     printUrls(cpyOfUrls, saveFirstPrint);
 
     sendMsgToSlack('log', 'Printed URLs');
-    res.end(JSON.stringify({
+    return res.end(JSON.stringify({
       success: true,
       message: 'Printed URLs',
     }));
@@ -55,7 +55,7 @@ const main = async ({ res }: { res: http.ServerResponse}) => {
         sendMsgToSlack('warning', JSON.stringify(resultOfComparedPrints));
       }
 
-      res.end(JSON.stringify({
+      return res.end(JSON.stringify({
         success: true,
         message: 'Compared URLs',
         data: resultOfComparedPrints,
