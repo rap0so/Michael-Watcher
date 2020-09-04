@@ -8,5 +8,65 @@
         "path": "https://www.decathlon.com.br/calcados",
         "name": "department",
         "highPriority": false
+    },
+    {
+        "path": "https://www.decathlon.com.br/calcados/todos-os-tenis#1",
+        "name": "category",
+        "highPriority": false
+    },
+    {
+        "path": "https://www.decathlon.com.br/tenis-masculino-de-corrida-run-one/p",
+        "name": "product page 1",
+        "highPriority": false
+    },
+    {
+        "path": "https://www.decathlon.com.br/lona-tela-chao-de-barraca-3-m-x-25-m-quechua/p",
+        "name": "product page 2",
+        "highPriority": false
+    },
+    {
+        "path": "https://www.decathlon.com.br/bicicleta-de-lazer-aro-26-rockrider-100-btwin/p",
+        "name": "product page 3",
+        "highPriority": false
+    },
+    {
+        "path": "https://www.decathlon.com.br/legging-feminina-120-bolso/p",
+        "name": "product page 4",
+        "highPriority": false
+    },
+    {
+        "path": "https://www.decathlon.com.br/checkout#/cart",
+        "name": "cart",
+        "highPriority": false
+    },
+    {
+        "path": "https://www.decathlon.com.br/informacaoes-covid-19",
+        "name": "covid",
+        "highPriority": false
+    },
+    {
+        "path": "https://www.decathlon.com.br/institucional/quem-somos",
+        "name": "institutional",
+        "highPriority": false
+    },
+    {
+        "path": "https://www.decathlon.com.br/retire-na-loja-sem-contato",
+        "name": "hotsite",
+        "highPriority": false
+    },
+    {
+        "path": "https://www.decathlon.com.br/cadastro",
+        "name": "signin",
+        "highPriority": false
+    },
+    {
+        "path": "https://www.decathlon.com.br/lojas",
+        "name": "lojas",
+        "highPriority": false
+    },
+    {
+        "path": "https://www.decathlon.com.br/pesquisa?q=sapato",
+        "name": "busca",
+        "highPriority": false
     }
 ]
