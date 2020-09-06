@@ -18,7 +18,8 @@ dayJs.extend(timezone);
 
 // TODO: integration test here
 const main = async ({ res }: TMainProps) => {
-  const weekDay = dayJs().tz('America/Sao_Paulo').day();
+  const today = dayJs().tz('America/Sao_Paulo');
+  const weekDay = today.day();
 
   if (weekDay === 5) {
     console.log('Today should be friday');
@@ -69,9 +70,8 @@ const main = async ({ res }: TMainProps) => {
     }
   }
 
-  const today = new Date();
-
   sendMsgToSlack('log', `Today is ${today}`);
+
   return res.end(JSON.stringify({
     success: true,
     message: 'Invalid Date',
