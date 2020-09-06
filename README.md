@@ -59,7 +59,7 @@ npm test
 * [] Add status/health page/project
 * [] Add E2e tests
 * [] Capture all [errors](https://github.com/puppeteer/puppeteer/issues/1030) from page
-* [] Push message to slack when error
+* [x] Push message to slack when error
 * [] Read "high priority" on JSON and send slack + whatsapp + email message when this is true
 * [] Look for a better folder structure
 

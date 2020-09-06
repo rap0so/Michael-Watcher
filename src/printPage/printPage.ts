@@ -4,6 +4,7 @@ import fullPageScreenshot from 'puppeteer-full-page-screenshot';
 
 import { TPrintPosition, TUrl } from 'types';
 
+import sendMsgToSlack from '../sendMsgToSlack';
 import { printDir } from '../consts';
 
 const printPage = async (url: TUrl, position: TPrintPosition) => {
@@ -31,7 +32,7 @@ const printPage = async (url: TUrl, position: TPrintPosition) => {
 
     await browser.close();
   } catch (error) {
-    // TODO: save error to logs
+    sendMsgToSlack('warning', `Error in "printPage" process: ${error}`);
   }
 };
 
