@@ -1,5 +1,6 @@
 import dayJs from 'dayjs';
-import http from 'http';
+import timezone from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc';
 import { TUrls, TUrl } from 'types';
 
 import comparePrints from '../comparePrints';
@@ -10,11 +11,14 @@ import printUrls from '../printUrls';
 import sendMsgToSlack from '../sendMsgToSlack';
 
 import urls from '../urls.json';
+import { TMainProps } from './types';
+
+dayJs.extend(utc);
+dayJs.extend(timezone);
 
 // TODO: integration test here
-// TODO: type res on a separated file
-const main = async ({ res }: { res: http.ServerResponse}) => {
-  const weekDay = dayJs().day();
+const main = async ({ res }: TMainProps) => {
+  const weekDay = dayJs().tz('America/Sao_Paulo').day();
 
   if (weekDay === 5) {
     console.log('Today should be friday');
