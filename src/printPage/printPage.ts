@@ -20,7 +20,12 @@ const printPage = async (url: TUrl, position: TPrintPosition) => {
 
     const puppeteerOptions = { path: `${dir}/${position}.png` };
 
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+      ],
+    });
 
     const page = await browser.newPage();
     await page.setViewport({ width: 1920, height: 5000 });
