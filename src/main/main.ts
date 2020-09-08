@@ -20,7 +20,7 @@ const main = async ({ res }: TMainProps) => {
   const today = dayJs().subtract(brazilianGMT, 'hour');
   const weekDay = today.day();
 
-  if (weekDay === FRIDAY_WEEK_DAY) {
+  if (weekDay === FRIDAY_WEEK_DAY || true) {
     const cpyOfUrls:TUrls = Array.from(urls);
     const saveFirstPrint = (url: TUrl) => printPage(url, 1);
 
