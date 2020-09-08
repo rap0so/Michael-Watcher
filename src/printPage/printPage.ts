@@ -28,6 +28,9 @@ const printPage = async (url: TUrl, position: TPrintPosition) => {
     });
 
     const page = await browser.newPage();
+
+    await page.setDefaultNavigationTimeout(0);
+
     await page.setViewport({ width: 1920, height: 5000 });
 
     await page.goto(path);
